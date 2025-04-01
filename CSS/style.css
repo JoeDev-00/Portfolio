@@ -654,6 +654,22 @@
   }
   
   /* Responsive */
+  @media(min-width: 995px) {
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      gap: 770px;
+      transition: var(--transition);
+    }
+  }
   @media (max-width: 992px) {
     .hero .container {
       flex-direction: column;
@@ -670,6 +686,7 @@
   }
   
   @media (max-width: 768px) {
+    
     nav {
       position: fixed;
       top: 0;

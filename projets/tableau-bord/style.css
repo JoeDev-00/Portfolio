@@ -30,6 +30,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
   
   a {
@@ -128,9 +129,22 @@
     color: #666;
   }
   
+  .sidebar{
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: calc(100vh - 180px);
+    top: 80px;
+    left: 0;
+  }
+
   .sidebar-nav {
+    position
     flex: 1;
     padding: 20px 0;
+   height: calc(100vh - 560px);
   }
   
   .sidebar-nav ul li {
@@ -185,6 +199,7 @@
   
   /* Dashboard Content */
   .dashboard-content {
+    overflow: auto;
     flex: 1;
     padding: 20px;
     margin-left: var(--sidebar-width);
@@ -408,6 +423,9 @@
   
   /* Footer */
   footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: var(--dark-color);
