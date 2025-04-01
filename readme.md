@@ -18,13 +18,13 @@ Bienvenue dans mon portfolio interactif ! Ce projet met en avant mes compétence
 - **HTML5** - Structure du site
 - **CSS3** - Mise en page et animations
 - **JavaScript (ES6+)** - Interactivité et logique métier
-- **APIs externes** - Pour les données météo et citations
+- **APIs externes** - Pour les données météo 
 - **LocalStorage** - Sauvegarde des données utilisateur
 
 ## 📂 Installation
 1. **Clonez le repo** :
    ```bash
-   git clone https://github.com/votre-utilisateur/portfolio-web.git
+   git clone https://github.com/JoeDev-00/Portfolio.git
    ```
 2. **Ouvrez le fichier `index.html`** dans un navigateur.
 3. **Profitez de l'expérience interactive !** 🚀
