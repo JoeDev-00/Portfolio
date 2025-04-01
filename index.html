@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <div class="logo">
+            <h1>Portfolio<span>.</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">Bienvenue sur mon portfolio</h1>
+                <br>
+                <div class="hero-image reveal-image">
+                    <img src="images/moi.jpg" alt="Illustration">
+                </div> <br>
+                <p class="reveal-text delay-1">Joseph Dieudonné ABOUDI, Développeur Web passionné par la création
+                    digitale et le monde du numérique</p>
+                <a href="#projets" class="btn reveal-text delay-2">Découvrir mes projets</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/citation.png" alt="Générateur de citations">
+                    </div>
+                    <div class="project-content">
+                        <h3>Générateur de citations</h3>
+                        <p>partagez les meilleures citations du monde avec vos amis sur facebook, whatsapp et X pour les
+                            plus responsables </p>
+                        <a href="projets/generateur-citations/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/CHI-FU-MI.jpg" alt="Jeu en JavaScript">
+                    </div>
+                    <div class="project-content">
+                        <h3>CHI .... FU ... MI</h3>
+                        <p>Pierre Papier Ciseaux : un jeu intemporel, revisité par mes soins ! Clique, joue et
+                            amuse-toi. Et si tu gagnes, tu pourras te vanter d'avoir battu mon code !</p>
+                        <a href="projets/jeu-javascript/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="images/tableau.png" alt="Tableau de bord">
+                    </div>
+                    <div class="project-content">
+                        <h3>Tableau de bord </h3>
+                        <p>Une interface raphique de representation du tableau de bord statistiques d'un administrateur
+                        </p>
+                        <a href="projets/tableau-bord/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/meteo.jpg" alt="Application météo">
+                    </div>
+                    <div class="project-content">
+                        <h3>Application météo</h3>
+                        <p>Affiche la météo en fonction de la localisation avec l'API OpenWeather.</p>
+                        <a href="projets/meteo/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/todo.jpg" alt="To-Do List">
+                    </div>
+                    <div class="project-content">
+                        <h3>To-Do List</h3>
+                        <p>Inscrivez vos taches,modifiez les, cochez les lorsqu'elles sont terminées,supprimez les à
+                            votre guise et retrouvez les plus tard. </p>
+                        <a href="projets/todo-list/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="images/netflix.jpg" alt="Clone de site">
+                    </div>
+                    <div class="project-content">
+                        <h3>Netflix Clone</h3>
+                        <p>Une page de connexion inspirée de Netflix, produite avec passion. </p>
+                        <a href="projets/clone-netflix/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/galerie.jpg" alt="Galerie d'images">
+                    </div>
+                    <div class="project-content">
+                        <h3>Galerie d'images</h3>
+                        <p>Une galerie d'images interactive avec recherche par catégories.</p>
+                        <a href="projets/galerie-images/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/degrade.jpg" alt="Générateur de dégradés">
+                    </div>
+                    <div class="project-content">
+                        <h3>Générateur de dégradés CSS</h3>
+                        <p>Dégradé aléatoire ou personnalisé conçu avec 2,3,7... couleurs 🤩 <br> Découvrez ou admirez
+                            la magie du dégradé.</p>
+                        <a href="projets/generateur-degrades/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="images/convertisseur.png" alt="Convertisseur d'unités">
+                    </div>
+                    <div class="project-content">
+                        <h3>Convertisseur d'unités</h3>
+                        <p>Longeur, masse, température , devise... convertissez vos mesures et unités en toute quiétude
+                        </p>
+                        <a href="projets/convertisseur/index.html" class="btn-project">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>josephaboudi32@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+237659504056</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Yaoundé, Cameroun</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/+237680246192" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/joseph-aboudi-22234133b/" class="social-link"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/JOSEjose_486" class="social-link"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100070628334279" class="social-link"><i
+                                class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Portfolio<span>.</span></h2>
+                </div>
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/JoeDev-00/" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joseph-aboudi-22234133b/" class="social-link"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/JOSEjose_486" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100070628334279" class="social-link"><i
+                            class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

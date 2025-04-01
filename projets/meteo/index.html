@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">Portfolio<span>.</span></a>
+        </div>
+        <a href="../../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </header>
+
+    <main>
+        <div class="weather-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Rechercher une ville...">
+                <button id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="location-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+            </div>
+            
+            <div class="weather-info">
+                <div class="city-info">
+                    <h1 id="city-name">Paris</h1>
+                    <p id="date">Lundi, 1 Avril 2025</p>
+                </div>
+                
+                <div class="current-weather">
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@4x.png" alt="Météo">
+                    </div>
+                    <div class="temperature">
+                        <h2 id="temperature">21°C</h2>
+                        <p id="weather-description">Ensoleillé</p>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <div>
+                                <p>Vent</p>
+                                <p id="wind-speed">10 km/h</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <p>Humidité</p>
+                                <p id="humidity">65%</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-thermometer-half"></i>
+                            <div>
+                                <p>Ressenti</p>
+                                <p id="feels-like">23°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forecast">
+                    <h3>Prévisions sur 5 jours</h3>
+                    <div class="forecast-container" id="forecast-container">
+                        <!-- Forecast items will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="info-card">
+                    <h3>Lever et coucher du soleil</h3>
+                    <div class="sun-info">
+                        <div class="sun-item">
+                            <i class="fas fa-sun"></i>
+                            <div>
+                                <p>Lever</p>
+                                <p id="sunrise">06:45</p>
+                            </div>
+                        </div>
+                        <div class="sun-item">
+                            <i class="fas fa-moon"></i>
+                            <div>
+                                <p>Coucher</p>
+                                <p id="sunset">20:15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Qualité de l'air</h3>
+                    <div class="air-quality">
+                        <div class="air-quality-indicator" id="air-quality-indicator">
+                            <div class="indicator-level" style="width: 70%;"></div>
+                        </div>
+                        <p id="air-quality-text">Bonne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="error-message" id="error-message">
+        <i class="fas fa-exclamation-circle"></i>
+        <p id="error-text">Une erreur est survenue. Veuillez réessayer.</p>
+        <button id="error-close-btn">Fermer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

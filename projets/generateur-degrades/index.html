@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Dégradés CSS | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">Portfolio<span>.</span></a>
+        </div>
+        <a href="../../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </header>
+        <div class="notification" id="notification">
+            <p id="notification-text"></p>
+        </div>
+    <main>
+        <div class="gradient-container">
+            <h1>Générateur de Dégradés CSS</h1>
+            
+            <div class="gradient-preview" id="gradient-preview">
+                <div class="gradient-text">Aperçu du dégradé</div>
+            </div>
+            
+            <div class="controls-container">
+                <div class="gradient-type">
+                    <h3>Type de dégradé</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gradient-type" value="linear" checked>
+                            <span>Linéaire</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="gradient-type" value="radial">
+                            <span>Radial</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="gradient-type" value="conic">
+                            <span>Conique</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="gradient-direction" id="direction-control">
+                    <h3>Direction</h3>
+                    <div class="direction-buttons">
+                        <button class="direction-btn" data-direction="to top">↑</button>
+                        <button class="direction-btn" data-direction="to top right">↗</button>
+                        <button class="direction-btn" data-direction="to right">→</button>
+                        <button class="direction-btn" data-direction="to bottom right">↘</button>
+                        <button class="direction-btn active" data-direction="to bottom">↓</button>
+                        <button class="direction-btn" data-direction="to bottom left">↙</button>
+                        <button class="direction-btn" data-direction="to left">←</button>
+                        <button class="direction-btn" data-direction="to top left">↖</button>
+                    </div>
+                    <div class="angle-control">
+                        <label for="angle-input">Angle:</label>
+                        <input type="number" id="angle-input" min="0" max="360" value="180">
+                        <span>deg</span>
+                    </div>
+                </div>
+                
+                <div class="gradient-colors">
+                    <h3>Couleurs</h3>
+                    <div class="colors-container" id="colors-container">
+                        <div class="color-stop">
+                            <input type="color" value="#6c63ff" class="color-picker">
+                            <input type="number" value="0" min="0" max="100" class="color-position">
+                            <span>%</span>
+                            <button class="remove-color" disabled>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="color-stop">
+                            <input type="color" value="#ff6584" class="color-picker">
+                            <input type="number" value="100" min="0" max="100" class="color-position">
+                            <span>%</span>
+                            <button class="remove-color">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="add-color-btn">
+                        <i class="fas fa-plus"></i> Ajouter une couleur
+                    </button>
+                </div>
+                
+                <div class="gradient-options">
+                    <div class="option-group" id="radial-options" style="display: none;">
+                        <h3>Options Radial</h3>
+                        <div class="select-group">
+                            <label for="radial-shape">Forme:</label>
+                            <select id="radial-shape">
+                                <option value="circle">Cercle</option>
+                                <option value="ellipse">Ellipse</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <label for="radial-position">Position:</label>
+                            <select id="radial-position">
+                                <option value="center">Centre</option>
+                                <option value="top">Haut</option>
+                                <option value="right">Droite</option>
+                                <option value="bottom">Bas</option>
+                                <option value="left">Gauche</option>
+                                <option value="top left">Haut Gauche</option>
+                                <option value="top right">Haut Droite</option>
+                                <option value="bottom left">Bas Gauche</option>
+                                <option value="bottom right">Bas Droite</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group" id="conic-options" style="display: none;">
+                        <h3>Options Conique</h3>
+                        <div class="angle-control">
+                            <label for="conic-angle">Angle de départ:</label>
+                            <input type="number" id="conic-angle" min="0" max="360" value="0">
+                            <span>deg</span>
+                        </div>
+                        <div class="select-group">
+                            <label for="conic-position">Position:</label>
+                            <select id="conic-position">
+                                <option value="center">Centre</option>
+                                <option value="top">Haut</option>
+                                <option value="right">Droite</option>
+                                <option value="bottom">Bas</option>
+                                <option value="left">Gauche</option>
+                                <option value="top left">Haut Gauche</option>
+                                <option value="top right">Haut Droite</option>
+                                <option value="bottom left">Bas Gauche</option>
+                                <option value="bottom right">Bas Droite</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="code-container">
+                <h3>Code CSS</h3>
+                <div class="code-output">
+                    <pre id="css-code"></pre>
+                    <button id="copy-btn">
+                        <i class="fas fa-copy"></i> Copier
+                    </button>
+                </div>
+            </div>
+            
+            <div class="saved-gradients">
+                <h3>Dégradés sauvegardés</h3>
+                <div class="gradients-grid" id="saved-gradients-grid">
+                    &lt;!-- Saved gradients will be added here -->
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="save-btn">
+                    <i class="fas fa-save"></i> Sauvegarder
+                </button>
+                <button id="random-btn">
+                    <i class="fas fa-random"></i> Aléatoire
+                </button>
+                <button id="reset-btn">
+                    <i class="fas fa-undo"></i> Réinitialiser
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+

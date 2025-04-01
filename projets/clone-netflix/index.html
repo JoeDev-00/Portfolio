@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Netflix - Page de Connexion | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="back-to-portfolio">
+        <a href="../../index.html">
+            <i class="fas fa-arrow-left"></i> Retour au Portfolio
+        </a>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="../../images/netflix.jpg" alt="Netflix Logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="login-form">
+                <h1>S'identifier</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">E-mail ou numéro de téléphone</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Mot de passe</label>
+                    </div>
+                    <button type="submit" class="login-btn">S'identifier</button>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" checked>
+                            <label for="remember">Se souvenir de moi</label>
+                        </div>
+                        <a href="#" class="help-link">Besoin d'aide?</a>
+                    </div>
+                </form>
+                <div class="login-footer">
+                    <div class="signup-now">
+                        <p>Première visite sur Netflix? <a href="#">S'inscrire maintenant</a></p>
+                    </div>
+                    <div class="recaptcha-info">
+                        <p>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n'êtes pas un robot. <a href="#">En savoir plus.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <p>Des questions? Appelez le <a href="tel:0800-917-813">0800-917-813</a></p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Préférences de cookies</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Informations sur l'entreprise</a></li>
+                </ul>
+            </div>
+            <div class="language-selector">
+                <select>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <p>Ceci est une démo. Aucune donnée n'est envoyée.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur d'Unités | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">Portfolio<span>.</span></a>
+        </div>
+        <a href="../../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </header>
+
+    <main>
+        <div class="converter-container">
+            <h1>Convertisseur d'Unités</h1>
+            
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="length">
+                    <i class="fas fa-ruler"></i> Longueur
+                </button>
+                <button class="tab-btn" data-category="mass">
+                    <i class="fas fa-weight-hanging"></i> Masse
+                </button>
+                <button class="tab-btn" data-category="temperature">
+                    <i class="fas fa-thermometer-half"></i> Température
+                </button>
+                <button class="tab-btn" data-category="area">
+                    <i class="fas fa-vector-square"></i> Surface
+                </button>
+                <button class="tab-btn" data-category="volume">
+                    <i class="fas fa-cube"></i> Volume
+                </button>
+                <button class="tab-btn" data-category="time">
+                    <i class="fas fa-clock"></i> Temps
+                </button>
+                <button class="tab-btn" data-category="speed">
+                    <i class="fas fa-tachometer-alt"></i> Vitesse
+                </button>
+                <button class="tab-btn" data-category="currency">
+                    <i class="fas fa-money-bill-wave"></i> Devise
+                </button>
+            </div>
+            
+            <div class="converter-content">
+                <div class="converter-inputs">
+                    <div class="input-group">
+                        <input type="number" id="from-value" value="1">
+                        <select id="from-unit"></select>
+                    </div>
+                    <button id="swap-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    <div class="input-group">
+                        <input type="number" id="to-value" readonly>
+                        <select id="to-unit"></select>
+                    </div>
+                </div>
+                
+                <div class="conversion-formula">
+                    <h3>Formule de conversion</h3>
+                    <p id="formula">1 mètre = 100 centimètres</p>
+                </div>
+                
+                <div class="conversion-history">
+                    <h3>Historique des conversions</h3>
+                    <ul id="history-list"></ul>
+                    <button id="clear-history-btn">Effacer l'historique</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

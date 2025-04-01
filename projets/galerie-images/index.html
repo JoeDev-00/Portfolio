@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Images avec Lightbox | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">Portfolio<span>.</span></a>
+        </div>
+        <a href="../../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <h1>Galerie d'Images</h1>
+            
+            <div class="filter-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Rechercher...">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="travel">Voyage</button>
+                </div>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+               <!-- Images will be added here dynamically -->
+            </div>
+            
+            <div class="load-more">
+                <button id="load-more-btn">Charger plus</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <div class="lightbox-header">
+                <h2 id="lightbox-title">Titre de l'image</h2>
+                <button id="close-lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="lightbox-body">
+                <button id="prev-btn" class="lightbox-nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="lightbox-image-container">
+                    <img id="lightbox-image" src="/placeholder.svg" alt="Image">
+                </div>
+                <button id="next-btn" class="lightbox-nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="lightbox-footer">
+                <div class="lightbox-info">
+                    <p id="lightbox-description">Description de l'image</p>
+                    <p id="lightbox-count">1 / 10</p>
+                </div>
+                <div class="lightbox-actions">
+                    <button id="download-btn">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button id="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button id="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-modal" id="share-modal">
+        <div class="share-content">
+            <div class="share-header">
+                <h3>Partager cette image</h3>
+                <button id="close-share">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="share-body">
+                <div class="share-buttons">
+                    <button class="share-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="share-btn twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </button>
+                    <button class="share-btn pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </button>
+                    <button class="share-btn linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </button>
+                </div>
+                <div class="share-link">
+                    <input type="text" id="share-link-input" value="https://example.com/image.jpg" readonly>
+                    <button id="copy-link-btn">Copier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
