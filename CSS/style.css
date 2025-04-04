@@ -240,6 +240,8 @@ header.scrolled .menu-toggle {
 .hero-image {
   flex: 1;
   max-width: 500px;
+  max-height: 500px;
+  border-radius: 50%;
   animation: float 6s ease-in-out infinite;
 }
 
